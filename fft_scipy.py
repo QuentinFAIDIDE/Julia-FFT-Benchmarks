@@ -4,6 +4,7 @@ from scipy.io import wavfile
 from scipy import fft
 import time
 import math
+import sys
 
 # load file    
 samplerate, data = wavfile.read('data/Ultrasonic_-_Slap_House_Essentials_-_Clap_04.wav')
@@ -16,6 +17,7 @@ computing_time_ms = int(math.floor(1000*(time.time()-start_time)))
 # drop computing time
 print("BENCHMARK RESULT")
 print(computing_time_ms)
+print(sys.version)
 
 # compute frequencies of beginning of bins for each array value
 freq = np.arange(0,samplerate/2,samplerate/len(freq_domain_intensities))

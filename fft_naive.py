@@ -3,6 +3,7 @@ import random
 from scipy.io import wavfile
 import time
 import math
+import sys
 
 def fft_naive(x):
     N = len(x)
@@ -31,6 +32,7 @@ computing_time_ms = int(math.floor(1000*(time.time()-start_time)))
 # drop computing time
 print("BENCHMARK RESULT")
 print(computing_time_ms)
+print(sys.version)
 
 # compute frequencies of beginning of bins for each array value
 freq = np.arange(0,samplerate/2+1,samplerate/len(freq_domain_intensities))

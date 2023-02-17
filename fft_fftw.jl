@@ -17,6 +17,7 @@ time_taken_ms = trunc(Int, (time()-start_time)*1000)
 # print time taken to stdout
 print("BENCHMARK RESULT\n")
 print(time_taken_ms,"\n")
+print(VERSION,"\n")
 
 # convert data to something properly formatted
 sr = 44100

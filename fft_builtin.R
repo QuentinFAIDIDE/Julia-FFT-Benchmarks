@@ -13,6 +13,7 @@ freq <- seq(from=0, to=sr/2, by=DF)
 
 message("BENCHMARK RESULT")
 message(time_taken)
+message(strsplit(version[['version.string']], ' ')[[1]][3])
 
 for(i in seq_along(freq)) {
     message(freq[i])
